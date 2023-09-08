@@ -1,8 +1,7 @@
 {
   "profiles": {
     "GitExporter": {
-      "commandName": "Project",
-      "commandLineArgs": " \"C:\\Users\\mimim\\Desktop\\currentProjects\\MnistGithub\" \"C:\\Users\\mimim\\Desktop\\currentProjects\\git repository extraction\\testBat\""
+      "commandName": "Project"
     }
   }
 }
