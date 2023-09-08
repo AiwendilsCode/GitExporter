@@ -21,7 +21,7 @@ foreach (var sha1 in sha1Hashes)
     execute($"git --git-dir \"{commandLineVars[1]}\\.git\" show --no-patch \"{sha1}\" > \"{commandLineVars[2]}/{sha1}/commitInformations.txt\"");
 } 
 
-Console.WriteLine($"{sha1Hashes.Length} was exported.");
+Console.WriteLine($"{sha1Hashes.Length} commits was exported.");
 
 Console.WriteLine("Removing zip folder.");
 Directory.Delete($"{commandLineVars[2]}/zipFiles", true);
