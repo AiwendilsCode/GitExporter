@@ -4,14 +4,15 @@ using System.IO.Compression;
 var commandLineVars = Environment.GetCommandLineArgs();
 ValidateArguments(commandLineVars);
 
+Console.WriteLine("Getting hashes...");
 var sha1Hashes = getHashes();
 
-Console.WriteLine("Creating zip folder.");
+Console.WriteLine("Creating zip folder...");
 Directory.CreateDirectory($"{commandLineVars[2]}/zipFiles");
 
 foreach (var sha1 in sha1Hashes)
 {
-    Console.WriteLine($"Exporting {sha1} commit.");
+    Console.WriteLine($"Exporting {sha1} commit...");
 
     execute($"git --git-dir \"{commandLineVars[1]}\\.git\" archive --format=zip \"{sha1}\" -o \"{commandLineVars[2]}/zipFiles/{sha1}.zip\"");
 
@@ -49,15 +50,15 @@ string[] getHashes()
 {
     Process git = new Process();
     git.StartInfo.FileName = "git.exe";
-    git.StartInfo.RedirectStandardInput = true;
+    git.StartInfo.RedirectStandardInput = false;
     git.StartInfo.RedirectStandardOutput = true;
     git.StartInfo.Arguments = $"--git-dir \"{commandLineVars[1] ?? ""}\\.git\" rev-list --all";
-    git.StartInfo.CreateNoWindow = true;
+    git.StartInfo.CreateNoWindow = false;
     git.StartInfo.UseShellExecute = false;
     git.Start();
 
-    git.WaitForExit();
     string stringHashes = git.StandardOutput.ReadToEnd().ReplaceLineEndings();
+    git.WaitForExit();
 
     return stringHashes.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
 }

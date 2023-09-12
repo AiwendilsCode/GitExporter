@@ -1,7 +1,8 @@
 {
   "profiles": {
     "GitExporter": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Temp\\GitHub\\Courier-box-duo\" \"C:\\Temp\\Output\""
     }
   }
 }
