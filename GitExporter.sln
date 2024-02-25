@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitExporter", "GitExporter\GitExporter.csproj", "{0209F367-E0D1-4FC8-A1FF-77CE1058B848}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitExporter", "src\GitExporter\GitExporter.csproj", "{73DA664B-387B-48F3-8135-A04CE3B551D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitExporter.Abstractions", "src\GitExporter.Abstractions\GitExporter.Abstractions.csproj", "{E87C6094-8C4A-4220-8874-C81E615F3C83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitExporter.Abstractions.Tests", "src\GitExporter.Abstractions.Tests\GitExporter.Abstractions.Tests.csproj", "{8D4FC328-3053-4F11-8960-A4E8130D426E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0209F367-E0D1-4FC8-A1FF-77CE1058B848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0209F367-E0D1-4FC8-A1FF-77CE1058B848}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0209F367-E0D1-4FC8-A1FF-77CE1058B848}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0209F367-E0D1-4FC8-A1FF-77CE1058B848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DA664B-387B-48F3-8135-A04CE3B551D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73DA664B-387B-48F3-8135-A04CE3B551D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73DA664B-387B-48F3-8135-A04CE3B551D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73DA664B-387B-48F3-8135-A04CE3B551D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E87C6094-8C4A-4220-8874-C81E615F3C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E87C6094-8C4A-4220-8874-C81E615F3C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E87C6094-8C4A-4220-8874-C81E615F3C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E87C6094-8C4A-4220-8874-C81E615F3C83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4FC328-3053-4F11-8960-A4E8130D426E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4FC328-3053-4F11-8960-A4E8130D426E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4FC328-3053-4F11-8960-A4E8130D426E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4FC328-3053-4F11-8960-A4E8130D426E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GitExporter": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\tmp1\" \"D:\\projects\\git repository extraction\\GitExporter\" \"master\""
+    }
+  }
+}
