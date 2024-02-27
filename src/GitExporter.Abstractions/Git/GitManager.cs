@@ -35,7 +35,12 @@ namespace GitExporter.Abstractions.Git
 
             _cmdManager.ExecuteCommand($"git --git-dir \"{repoDirectory}\\.git\" archive --format=zip \"{commitInfo.Hash}\" -o \"{commitInfo.Hash}temp.zip\"");
 
-            ZipFile.ExtractToDirectory($"{commitInfo.Hash}temp.zip", $"{directory}/{commitInfo.CommitDateTime:dd-MM-yyyy--HH-mm-ss}");
+            if (Directory.Exists($"{directory}/{commitInfo.CommitDateTime:dd-MM-yyyy HH-mm-ss}"))
+            {
+                Directory.Delete($"{directory}/{commitInfo.CommitDateTime:dd-MM-yyyy HH-mm-ss}");
+            }
+
+            ZipFile.ExtractToDirectory($"{commitInfo.Hash}temp.zip", $"{directory}/{commitInfo.CommitDateTime:dd-MM-yyyy HH-mm-ss}");
 
             File.Delete($"{commitInfo.Hash}temp.zip");
         }
